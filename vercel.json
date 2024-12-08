@@ -1,5 +1,6 @@
 {
   "name": "liMil TnlSrv",
+  "type": "module",
   "version": 2,
   "builds": [
     {
