@@ -8,8 +8,10 @@ export default async function handler(req, res) {
      ID:  ${userID} 
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
+    
+     const MyURL = `https://ictfz.ir${userID}`;   
 ////////////////////////////////
-        const url = new URL(req.url);
+        const url = new URL(MyURL);
         url.hostname = 'ictfz.ir';
         url.protocol = 'https:';
 ////////////////////////////////////////    
