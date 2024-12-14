@@ -9,7 +9,7 @@ export default async function handler(req, res) {
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
     
-     const MyURL = `https://dl.chiphost.site${userID}`;   
+     const MyURL = `https://host.chiphost.site${userID}`;   
 ////////////////////////////////
         const url = new URL(MyURL);
 
