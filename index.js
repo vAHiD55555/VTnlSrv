@@ -1,14 +1,14 @@
 export default async function handler(req, res) {
   try {
     const userID = req.url;
-    const userHost = "limil.org";
+    const userHost = process.env.HOST || "ictfz.ir";
     const userTPass = process.env.HOST;
-    const userBBF = res.HOST;
+
     
     const MyPage = `
      ID:  ${userID} 
      Host:  ${userHost} 
-     TPass:  ${userTPass}   -- ${userBBF}`;
+     TPass:  ${userTPass}   `;
     
      const MyURL = `https://${userHost}${userID}`;   
 ////////////////////////////////
@@ -22,9 +22,9 @@ export default async function handler(req, res) {
             body: req.body,
         });
 ////////////////////////////////////////    
-    res.status(200).send(MyPage); //MyPage  
+    //res.status(200).send(MyPage); //MyPage  
     //res.status(response.status).json(await response.text());
-    //res.status(response.status).send(await response.text());
+    res.status(response.status).send(await response.text());
     
     } catch (error) {
         res.status(500).json({ error: error.message });
