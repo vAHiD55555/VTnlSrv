@@ -1,11 +1,16 @@
 {
-  "name": "liMil TnlSrv",
   "type": "module",
   "version": 2,
   "builds": [
     {
       "src": "api/node.js",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/node.js"
     }
   ]
 }
