@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  async fetch(request, env) {
+  try {
     const userID = env.UUID;
     const userHost = env.HOST;
     const userTPass = env.TPASS;
@@ -8,6 +8,9 @@ export default async function handler(req, res) {
      ID:  ${userID} 
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
-    return new Response(MyPage);
-  },
+    
+    res.status(response.status).json(MyPage);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
