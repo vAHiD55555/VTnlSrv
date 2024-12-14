@@ -9,7 +9,7 @@ export default async function handler(req, res) {
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
     
-    res.status(200).json(MyPage);
+    res.status(200).send(MyPage);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
