@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
   try {
     const userID = req.url;
-    const userHost = "my.com";
-    const userTPass = "pass";
+    const userHost = req.method;
+    const userTPass = req.protocol;
   
     const MyPage = `
      ID:  ${userID} 
@@ -21,8 +21,8 @@ export default async function handler(req, res) {
             body: req.body,
         });
 ////////////////////////////////////////    
-    //res.status(200).send(MyPage);
-    res.status(response.status).send(await response.text());
+    res.status(200).send(MyPage);
+    //res.status(response.status).send(await response.text());
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
