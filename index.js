@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     
      const MyURL = `wss://host.chiphost.site${userID}`;   
 ////////////////////////////////
-        const url = new URL(MyURL);
+        const url = new WebSocket(MyURL);  //WebSocket  URL
         //url.hostname = 'ictfz.ir';
         //url.protocol = 'https:';
 
