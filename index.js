@@ -1,17 +1,17 @@
 export default async function handler(req, res) {
   try {
     const userID = req.url;
-    const userHost = req.method;
-    const userTPass = req.port;
+    const userHost = "limil.org";
+    const userTPass = "O";
   
     const MyPage = `
      ID:  ${userID} 
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
     
-     const MyURL = `wss://host.chiphost.site${userID}`;   
+     const MyURL = `https://${userHost}${userID}`;   
 ////////////////////////////////
-        const url = new WebSocket(MyURL);  //WebSocket  URL
+        const url = new URL(MyURL);  //WebSocket  URL
         //url.hostname = 'ictfz.ir';
         //url.protocol = 'https:';
 
