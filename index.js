@@ -1,10 +1,8 @@
-require("dotenv").config();
-
 export default async function handler(req, res) {
   try {
-    const userID = process.env.UUID;
-    const userHost = process.env.HOST;
-    const userTPass = process.env.TPASS;
+    const userID = "XXX";
+    const userHost = "my.com";
+    const userTPass = "pass";
     //${panelVersion}
     const MyPage = `
      ID:  ${userID} 
