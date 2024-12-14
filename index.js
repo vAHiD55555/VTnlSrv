@@ -1,9 +1,13 @@
 export default {
-    async fetch(request, env) {
-                        const url = new URL(request.url);
-                        url.hostname = 'ictfz.ir';
-                        url.protocol = 'https:';
-                        request = new Request(url, request);
-                        return fetch(request);      
-    }
+  async fetch(request, env) {
+    const userID = env.UUID;
+    const userHost = env.HOST;
+    const userTPass = env.TPASS;
+    //${panelVersion}
+    const MyPage = `
+     ID:  ${userID} 
+     Host:  ${userHost} 
+     TPass:  ${userTPass}   `;
+    return new Response(MyPage);
+  },
 };
