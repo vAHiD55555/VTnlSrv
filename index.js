@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 ////////////////////////////////
         const url = new URL(MyURL);
         //url.hostname = 'ictfz.ir';
-        //url.protocol = 'https:';
+        url.protocol = 'https:';
     const userPrt = url.protocol;
 const Mytxt = `prot: ${userPrt}`; 
         const response = await fetch(url.toString(), {
