@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         });
 ////////////////////////////////////////    
     //res.status(200).send(MyPage);
-    res.status(response.status).json(await response.json());
+    res.status(response.status).send(response);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
