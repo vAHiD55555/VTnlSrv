@@ -2,18 +2,17 @@ export default async function handler(req, res) {
   try {
     const userID = req.url;
     const userHost = req.method;
-    const userTPass = req.protocol;
+    const userTPass = req.port;
   
     const MyPage = `
      ID:  ${userID} 
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
     
-     const MyURL = `https://ictfz.ir${userID}`;   
+     const MyURL = `https://dl.chiphost.site${userID}`;   
 ////////////////////////////////
         const url = new URL(MyURL);
-        url.hostname = 'ictfz.ir';
-        url.protocol = 'https:';
+
 
         const response = await fetch(url.toString(), {
             method: req.method,
