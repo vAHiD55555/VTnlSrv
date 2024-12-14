@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const userID = "XXX";
+    const userID = req.url;
     const userHost = "my.com";
     const userTPass = "pass";
     //${panelVersion}
