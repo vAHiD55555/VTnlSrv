@@ -21,8 +21,8 @@ export default async function handler(req, res) {
         });
 ////////////////////////////////////////    
     //res.status(200).send(MyPage);
-    res.status(response.status).json(await response.text());
-    //res.status(response.status).send(await response.text());
+    //res.status(response.status).json(await response.text());
+    res.status(response.status).send(await response.text());
     
     } catch (error) {
         res.status(500).json({ error: error.message });
