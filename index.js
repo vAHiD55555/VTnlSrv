@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
   try {
-    const userID = env.UUID;
-    const userHost = env.HOST;
-    const userTPass = env.TPASS;
+    const userID = process.env.UUID;
+    const userHost = process.env.HOST;
+    const userTPass = process.env.TPASS;
     //${panelVersion}
     const MyPage = `
      ID:  ${userID} 
