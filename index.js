@@ -9,14 +9,13 @@ export default async function handler(req, res) {
      Host:  ${userHost} 
      TPass:  ${userTPass}   `;
     
-     const MyURL = `//host.chiphost.site${userID}`;   
+     const MyURL = `https://host.chiphost.site${userID}`;   
 ////////////////////////////////
         const url = new URL(MyURL);
         //url.hostname = 'ictfz.ir';
-        url.protocol = 'https:';
-    const userPrt = url.protocol;
-const Mytxt = `prot: ${userPrt}`; 
-        const response = await fetch(url.toString(), {
+        //url.protocol = 'https:';
+
+        const response = await fetch(url, {
             method: req.method,
             headers: req.headers,
             body: req.body,
