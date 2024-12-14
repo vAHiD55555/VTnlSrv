@@ -1,4 +1,4 @@
-export default {
+export default async function handler(req, res) {
   async fetch(request, env) {
     const userID = env.UUID;
     const userHost = env.HOST;
